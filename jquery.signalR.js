@@ -1307,7 +1307,8 @@
         getUrl: function (connection, transport, reconnecting, poll, ajaxPost) {
             /// <summary>Gets the url for making a GET based connect request</summary>
             var baseUrl = transport === "webSockets" ? "" : connection.baseUrl,
-                url = baseUrl + connection.appRelativeUrl,
+//                 url = baseUrl + connection.appRelativeUrl,
+                url = connection.url,
                 qs = "transport=" + transport;
 
             if (!ajaxPost && connection.groupsToken) {
